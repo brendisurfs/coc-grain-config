@@ -1,0 +1,13 @@
+import Result from "result"
+
+let nice = () => {
+  print("sick")
+}
+
+let someThing = cool => {
+  if (!cool) {
+    Err("not cool")
+  } else {
+    Ok("nice")
+  }
+}

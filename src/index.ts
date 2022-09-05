@@ -2,7 +2,8 @@ import { ExtensionContext, services, workspace, LanguageClient } from 'coc.nvim'
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const serverOptions = {
-    command: 'grain lsp',
+    command: 'grain',
+    arguments: 'lsp',
   };
 
   const clientOptions = {
