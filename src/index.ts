@@ -1,7 +1,29 @@
-import { commands, CompleteResult, ExtensionContext, listManager, sources, window, workspace } from 'coc.nvim';
+import {
+  commands,
+  CompleteResult,
+  ExtensionContext,
+  LanguageClient,
+  listManager,
+  sources,
+  window,
+  services,
+  workspace,
+} from 'coc.nvim';
 import DemoList from './lists';
 
 export async function activate(context: ExtensionContext): Promise<void> {
+  const serverOtpions = {
+    command: 'grain lsp',
+  };
+
+  const clientOptions = {
+    documentSelector: ['grain'],
+  };
+
+  const client = new LanguageClient('coc-grain', 'coc-grain', serverOtpions, clientOptions);
+
+  context.subscriptions.push(services.registLanguageClient(client));
+
   window.showMessage(`coc-grain works!`);
 
   context.subscriptions.push(
