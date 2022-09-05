@@ -1,3 +1,4 @@
+" --- NEW CONFIG
 if exists("b:current_syntax")
   finish
 endif
@@ -21,18 +22,21 @@ syntax match grainOperator "\v\+\="
 syntax region grainString start=/\v"/ skip=/\v\\./ end=/\v"/
 
 " Comments
-syntax match grainComment "\v//.*$"
+syntax region grainComment start="//\//.*" end="\\///.*"
+" syntax match grainComment "\\/\\/.*$"
 
 " variable
 " NOTE: this does not work.
-" syntax region grainIdentifier start="(?<=let).*" end="(?==)"
+syntax region grainIdentifier start="(?<=let).*" end="(?==)"
 "
 
 " linking
 highlight link grainString String
+highlight link grainComment Comment
 highlight link grainKeyword Keyword
 highlight link grainOperator Operator
 highlight link grainFunction Function
-" highlight link grainIdentifier Identifier
+highlight link grainIdentifier Identifier
 
 let b:current_syntax = "grain"
+
