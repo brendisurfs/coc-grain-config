@@ -5,6 +5,7 @@ let nice = () => {
 }
 
 let someThing = cool => {
+
   if (!cool) {
     Err("not cool")
   } else {

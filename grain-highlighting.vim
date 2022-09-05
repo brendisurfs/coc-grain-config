@@ -3,7 +3,7 @@ if exists("b:current_syntax")
 endif
 
 " syntax
-syntax keyword grainKeyword let record type enum
+syntax keyword grainKeyword let record type enum if else
 syntax keyword grainFunction print toString
 
 " Operators
@@ -24,13 +24,15 @@ syntax region grainString start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax match grainComment "\v//.*$"
 
 " variable
-syntax match grainIdentifier "(?<=let).*(?==)"
+" NOTE: this does not work.
+" syntax region grainIdentifier start="(?<=let).*" end="(?==)"
+"
 
 " linking
 highlight link grainString String
 highlight link grainKeyword Keyword
 highlight link grainOperator Operator
 highlight link grainFunction Function
-highlight link grainIdentifier Identifier
+" highlight link grainIdentifier Identifier
 
 let b:current_syntax = "grain"
