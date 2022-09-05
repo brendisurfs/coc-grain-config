@@ -1,11 +1,12 @@
 import Result from "result"
 
-let nice = () => {
-  print("sick")
+let variableDeclaration = () => {
+  print("string test" ++ toString(770))
 }
 
-let someThing = cool => {
+// this is a comment
 
+let someThing = cool => {
   if (!cool) {
     Err("not cool")
   } else {
