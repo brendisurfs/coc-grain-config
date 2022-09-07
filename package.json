@@ -49,12 +49,6 @@
           "description": "Enable coc-grain extension"
         }
       }
-    },
-    "commands": [
-      {
-        "command": "coc-grain.Command",
-        "title": "coc-grain command title"
-      }
-    ]
+    }
   }
 }
