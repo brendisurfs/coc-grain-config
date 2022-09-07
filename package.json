@@ -1,6 +1,6 @@
 {
   "name": "coc-grain",
-  "version": "0.0.0-development",
+  "version": "0.0.1-development",
   "description": "coc-plugin for grain",
   "author": "Brendan P. <64713032+brendisurfs@users.noreply.github.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "coc.nvim"
   ],
   "engines": {
-    "coc": "^0.0.80"
+    "coc": "^0.0.82"
   },
   "scripts": {
     "lint": "eslint src --ext ts",
